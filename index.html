@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Campaign</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Inline styling for better performance */
+        .progress-bar {
+          width: 0%;
+          transition: width 1s ease-in-out;
+        }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-xl font-bold">CrowdFund</h1>
+          <nav>
+            <a href="#about" class="px-3 py-2 hover:underline">Tentang Kami</a>
+            <a href="#progress" class="px-3 py-2 hover:underline">Kemajuan</a>
+            <a href="#faq" class="px-3 py-2 hover:underline">FAQ</a>
+          </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-blue-500 text-white py-16 text-center flex flex-col items-center" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Dukung Inovasi Masa Depan</h2>
+      <p class="text-lg md:text-xl max-w-2xl">Bantu kami meluncurkan produk inovatif yang bermanfaat bagi masyarakat.</p>
+      <button class="mt-6 px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300">Dukung Sekarang</button>
+    </section>
+
+    <!-- About Project Section -->
+    <section id="about" class="container mx-auto py-12 px-4 text-center" data-aos="fade-up">
+      <h3 class="text-3xl font-semibold mb-4">Tentang Proyek Kami</h3>
+      <p class="text-lg text-gray-700">Kami berkomitmen untuk menciptakan produk yang dapat memperbaiki kehidupan banyak orang dengan inovasi yang berkelanjutan. Dukungan Anda sangat berarti untuk mewujudkan visi ini.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-gray-200 py-12 text-center" data-aos="fade-up">
+      <h3 class="text-3xl font-semibold mb-8">Dukungan untuk Proyek Kami</h3>
+      <div class="grid gap-4 md:grid-cols-3 px-4">
+          <div class="p-4 bg-white rounded shadow">
+            <p class="italic">"Proyek ini akan membawa perubahan besar, saya sangat mendukung!"</p>
+            <p class="mt-2 font-bold">- Budi</p>
+          </div>
+          <div class="p-4 bg-white rounded shadow">
+            <p class="italic">"Inovasi yang berkelanjutan ini layak didukung!"</p>
+            <p class="mt-2 font-bold">- Bambang</p>
+          </div>
+          <div class="p-4 bg-white rounded shadow">
+            <p class="italic">"Produk ini akan sangat membantu masyarakat, dukung sekarang!"</p>
+            <p class="mt-2 font-bold">- Joyo</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress" class="container mx-auto py-12 px-4 text-center" data-aos="fade-up">
+      <h3 class="text-3xl font-semibold mb-6">Kemajuan Pendanaan</h3>
+      <div class="w-full bg-gray-300 rounded-full h-6 mb-2">
+          <div id="progress-bar" class="bg-green-500 h-6 rounded-full progress-bar"></div>
+      </div>
+      <p class="text-lg">55% dari target telah tercapai!</p>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="text-center py-12" data-aos="fade-up">
+      <button class="px-8 py-3 bg-green-500 text-white text-lg rounded-lg hover:bg-green-600 transition duration-300">Dukung Sekarang</button>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container mx-auto py-12 px-4" data-aos="fade-up">
+      <h3 class="text-3xl font-semibold mb-4 text-center">Pertanyaan yang Sering Diajukan</h3>
+      <div class="space-y-4">
+          <div class="p-4 bg-white rounded shadow">
+            <h4 class="font-semibold">Bagaimana cara saya mendukung proyek ini?</h4>
+            <p class="text-gray-700">Anda dapat mendukung proyek ini dengan mengklik tombol "Dukung Sekarang" dan mengikuti langkah-langkah yang diberikan.</p>
+          </div>
+          <div class="p-4 bg-white rounded shadow">
+            <h4 class="font-semibold">Apakah dukungan saya akan tercatat secara transparan?</h4>
+            <p class="text-gray-700">Ya, semua donasi akan tercatat secara terbuka dan dapat dilihat melalui halaman ini.</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-6">
+      <div class="container mx-auto text-center">
+          <p>© 2023 CrowdfundPro. Semua hak cipta dilindungi.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // Progress bar simulation
+      const targetAmount = 100000;
+      const currentAmount = 55000;
+      const progress = (currentAmount / targetAmount) * 100;
+      document.getElementById("progress-bar").style.width = `${progress}%`;
+    </script>
+  </body>
+</html>
